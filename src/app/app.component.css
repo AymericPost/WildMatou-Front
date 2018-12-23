@@ -1,0 +1,43 @@
+h1 {
+  -webkit-text-stroke: 1px white;
+  font-size: 4.5em;
+}
+
+h2 {
+   color: white;
+}
+
+@media (min-width: 1px) {
+
+   header, matou-box {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+   }
+
+   #down-arrow {
+      margin: 0 auto;
+      font-size: 6em;
+      color: white;
+   }
+}
+
+@media (min-width: 768px) {
+
+   header, matou-box {
+      height: auto;
+      display: inherit;
+   }
+
+   header {
+      height: 26vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   #down-arrow {
+      display: none;
+   }
+}

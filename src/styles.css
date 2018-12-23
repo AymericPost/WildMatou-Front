@@ -1,2 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+   font-family: Cantarell;
+   src: url('assets/fonts/Cantarell-Regular.ttf') format("truetype");
+}
+
+@font-face {
+   font-family: CantarellOblique;
+   src: url('assets/fonts/Cantarell-Oblique.ttf') format("truetype");
+}
+
+@font-face {
+   font-family: KittenSwashMono;
+   src: url("assets/fonts/KittenSwashMonolineTrial.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: KittenSwash;
+   src: url("assets/fonts/KittenSwashTrial.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+   background-image: url("./assets/astro-bg_80.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+   font-family: KittenSwash;
+}
+
+h2, h3, h4 {
+   font-family: KittenSwashMono;
+}
+
+.bg-rainbow {
+    height: 200px;
+    background: cyan; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+}
+
+.text-rainbow {
+   background: cyan;
+   background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet);
+   background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet);
+   background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet);
+   background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
