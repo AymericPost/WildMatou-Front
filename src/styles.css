@@ -41,7 +41,6 @@ h2, h3, h4 {
 }
 
 .bg-rainbow {
-    height: 200px;
     background: cyan; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */

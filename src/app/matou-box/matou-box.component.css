@@ -10,6 +10,10 @@ p {
    font-family: Cantarell;
 }
 
+.card-body {
+   height: 85%;
+}
+
 .small-input-container {
    display: flex;
    flex-direction: column;
@@ -20,14 +24,19 @@ p {
    max-height: 2rem;
 }
 
+.message {
+   background-color: rgba(0, 0, 0, 0.03);
+}
+
 button {
    margin-top: 0 auto;
    margin bottom: 0 auto;
    margin : 0 auto;
 }
 
-.message {
-   margin: 0;
+#matou-input {
+   position: absolute;
+   bottom: 2%;
 }
 
 @media (min-width: 1px) {

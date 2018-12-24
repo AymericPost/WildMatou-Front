@@ -20,7 +20,7 @@ export class MatouBoxComponent implements OnInit {
 
    private cacophonie:any[] = [];
 
-   private refresh:number = 5;
+   private refresh:number = 1000;
 
   constructor(roar:MatouRoarService, fetch:MatouFetchService) {
      this.roar = roar;
@@ -29,16 +29,15 @@ export class MatouBoxComponent implements OnInit {
 
   ngOnInit() {
 
-     // Create an Observable that will publish a value on an interval
-     const secondsCounter = interval(1000);
+     const secondsCounter = interval(this.refresh);
 
-        secondsCounter.subscribe(() =>
-           this.fetch.cacophonie().subscribe(
-           (incoming:any[]) => {
-                console.log("Got back : ", incoming)
-                if (this.cacophonie != incoming) this.cacophonie = incoming;
-            })
-        );
+     secondsCounter.subscribe(() =>
+        this.fetch.cacophonie().subscribe(
+        (incoming:any[]) => {
+             console.log("Got back : ", incoming)
+             if (this.cacophonie.length != incoming.length) this.cacophonie = incoming;
+         })
+     );
 
   }
 
