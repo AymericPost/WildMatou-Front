@@ -19,10 +19,10 @@
                   <input placeholder="Pseudo" maxlength="14" type="text" class="small-input" [(ngModel)]="pseudo" />
                </div>
 
-               <textarea placeholder="Message" type="text" class="col-12 col-md-8" [(ngModel)]="message"></textarea>
+               <textarea placeholder="Message" type="text" class="col-12 col-md-8" [(ngModel)]="message" (keyup.enter)="miaou(pseudo, message)"></textarea>
 
                <div class="small-input-container col-12 col-md-2">
-                  <button type="button" class="btn btn-light small-input" (keyup.enter)="miaou(pseudo, message)" (click)="miaou(pseudo, message)">Miauler</button>
+                  <button type="button" class="btn btn-light small-input" (click)="miaou(pseudo, message)">Miauler</button>
                </div>
             </div>
          </div>
