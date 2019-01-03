@@ -16,7 +16,7 @@ export class MatouRoarService {
 
    public roar(pseudo:string, message:string):Observable<any>{
 
-      const url = "http://192.168.1.48:8042/send?pseudo=" + pseudo + "&text=" + message;
+      const url = "http://localhost:8080/send?pseudo=" + pseudo + "&text=" + message;
       console.log(url)
     const promise:Observable<any> = this.client.get(url)
 
