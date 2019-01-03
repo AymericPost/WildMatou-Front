@@ -26,6 +26,10 @@ export class MatouBoxComponent implements OnInit, AfterViewChecked {
 
    private refresh:number = 1000;
 
+   private smInputIsDisplayed:boolean = false;
+
+   // private regexUrl = new RegExp("(?:(?:https?|ftp):\/\/|\b(?:[a-z\d]+\.))(?:(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))?\))+(?:\((?:[^\s()<>]+|(?:\(?:[^\s()<>]+\)))?\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))?");
+
   constructor(roar:MatouRoarService, fetch:MatouFetchService) {
      this.roar = roar;
      this.fetch = fetch;
@@ -56,11 +60,25 @@ export class MatouBoxComponent implements OnInit, AfterViewChecked {
       this.needScrolling = false;
       }
    }
+
   public miaou(pseudo, message):void {
+
+
+     // if(this.regexUrl.test(message)) {
+     //    let urls = [];
+     // 
+     //    urls = this.regexUrl.exec(message);
+     //    console.log(urls);
+     //
+     //    for(let i = 0 ; i < urls.length ; i++) {
+     //       if(urls[i] != undefined) message += "\n <a href='" + urls[i] + "'>" + urls[i] + "</a>";
+     //    }
+     // }
+
      this.roar.roar(pseudo, message).subscribe(
       (incoming:any) => { });
       this.message = "";
-
+      this.smInputIsDisplayed = false;
  }
 
 

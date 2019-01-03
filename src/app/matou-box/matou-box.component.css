@@ -41,12 +41,18 @@ button {
 
 @media (min-width: 1px) {
 
+   #matou-box-container {
+      display: block;
+      margin:auto;
+      height:100vh
+   }
+
    #matou-box {
       height: 90vh;
    }
 
    #matou-frame {
-      height: 65%;
+      height: 84%;
    }
 
    #frame-content {
@@ -55,10 +61,7 @@ button {
    }
 
    #matou-input {
-      height: 30%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display:none;
    }
 
    textarea {
@@ -66,10 +69,31 @@ button {
       margin-bottom: 3%;
    }
 
+   #sm-show-input-button {
+      display: block;
+   }
+
+   #sm-input-page {
+      height:100vh;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   #sm-input-button-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+   }
 }
 
 
 @media (min-width: 768px) {
+
+   #matou-box-container{
+      height: inherit;
+   }
 
    #matou-box {
       height: 70vh;
@@ -90,4 +114,11 @@ button {
       flex-direction: column;
       justify-content: center;
    }
+
+   #sm-show-input-button {
+      display: none;
+      width: 100%;
+      margin: 0 auto;
+   }
+
 }

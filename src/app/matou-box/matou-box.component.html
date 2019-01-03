@@ -1,31 +1,69 @@
 <section class="container">
-   <div class="card" id="matou-box">
-      <div class="card-header">
-         <h3>Matou-box</h3>
-      </div>
+   <div id="matou-box-container">
+      <div class="card d-inlineblock" id="matou-box">
+         <div class="card-header">
+            <h3 class="text-center">Matou-box</h3>
+         </div>
 
-      <div class="card-body">
-         <div id="matou-frame">
-            <div class="card" id="frame-content">
-               <div *ngFor="let miaou of cacophonie" >
-                  <p class="message m-1"><b>[{{ miaou.id }}] {{ miaou.pseudo}} :</b> {{ miaou.message }}</p>
+         <div class="card-body">
+            <div id="matou-frame">
+               <div class="card" id="frame-content">
+                  <div *ngFor="let miaou of cacophonie" >
+                     <p class="message m-1"><b>[{{ miaou.id }}] {{ miaou.pseudo}} : {{ miaou.message }}</p>
+                  </div>
+               </div>
+            </div>
+
+            <div id="matou-input" class="col-10 col-md-12">
+               <div class="row">
+                  <div class="small-input-container col-12 col-md-2">
+                     <input placeholder="Pseudo" maxlength="14" type="text" class="small-input" [(ngModel)]="pseudo" />
+                  </div>
+
+                  <textarea placeholder="Message" type="text" class="col-12 col-md-8" [(ngModel)]="message" (keyup.enter)="miaou(pseudo, message)"></textarea>
+
+                  <div class="small-input-container col-12 col-md-2">
+                     <button type="button" class="btn btn-light small-input" (click)="miaou(pseudo, message)">Miauler</button>
+                  </div>
+
+               </div>
+
+            </div>
+            <a type="button" href="#sm-input" class="btn btn-light mt-2" (click)="smInputIsDisplayed = !smInputIsDisplayed" id="sm-show-input-button">
+               <div *ngIf="smInputIsDisplayed; then smopen; else smclose"></div>
+               <ng-template #smopen>Fermer la fenètre de rédaction</ng-template>
+               <ng-template #smclose>Nouveau message</ng-template>
+            </a>
+         </div>
+      </div>
+   </div>
+
+   <div class="d-block mt-1">
+      <div *ngIf="smInputIsDisplayed; then sminput"></div>
+      <ng-template #sminput>
+         <div id="sm-input-page">
+            <div class="card" id="sm-input">
+               <div class="card-header">
+                  <h3 class="text-center">Nouveau message</h3>
+                  <a type="button" href="#matou-box" class="btn btn-danger" (click)="smInputIsDisplayed = !smInputIsDisplayed" id="sm-input-button-close">X</a>
+               </div>
+               <div class="card-body">
+                  <div class="col-10 col-md-12">
+                     <div class="row">
+                        <div class="small-input-container col-12 col-md-2">
+                           <input placeholder="Pseudo" maxlength="14" type="text" class="small-input" [(ngModel)]="pseudo" />
+                        </div>
+
+                        <textarea placeholder="Message" type="text" class="col-12 col-md-8" [(ngModel)]="message" (keyup.enter)="miaou(pseudo, message)"></textarea>
+
+                        <div class="small-input-container col-12 col-md-2">
+                           <a type="button" class="btn btn-light small-input" href="#matou-frame" (click)="miaou(pseudo, message)">Miauler</a>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
-
-         <div id="matou-input" class="col-10 col-md-12">
-            <div class="row">
-               <div class="small-input-container col-12 col-md-2">
-                  <input placeholder="Pseudo" maxlength="14" type="text" class="small-input" [(ngModel)]="pseudo" />
-               </div>
-
-               <textarea placeholder="Message" type="text" class="col-12 col-md-8" [(ngModel)]="message" (keyup.enter)="miaou(pseudo, message)"></textarea>
-
-               <div class="small-input-container col-12 col-md-2">
-                  <button type="button" class="btn btn-light small-input" (click)="miaou(pseudo, message)">Miauler</button>
-               </div>
-            </div>
-         </div>
-      </div>
+      </ng-template>
    </div>
 </section>

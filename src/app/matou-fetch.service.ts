@@ -15,7 +15,7 @@ export class MatouFetchService {
    }
 
    public cacophonie():Observable<any>{
-    const promise:Observable<any> = this.client.get("http://192.168.1.13:8042/get")
+    const promise:Observable<any> = this.client.get("http://192.168.1.48:8042/get")
 
     const treatment = (data:any):any[] => {
       return data;
