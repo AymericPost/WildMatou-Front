@@ -1,27 +1,85 @@
 # WildMatou
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+WildMatou est une chat-box développée à titre de projet personnel. Ce site permet de discuter avec tous ceux qui y ont accés.
 
-## Development server
+Ce dépot contient la partie présentation front-end. La partie serveur back-end est sur le dépot [WildMatou-Back](https://github.com/AymericPost/WildMatou-Back).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Execution
 
-## Code scaffolding
+### Pré-requis
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js
+- npm
+- Angular CLI
+- [WildMatou-Back](https://github.com/AymericPost/WildMatou-Back) Installé et lancé
 
-## Build
+Voir [le guide d'installation d'Angular](https://angular.io/guide/quickstart).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Installation
 
-## Running unit tests
+1. Téléchargez le projet ou entrez dans le terminal :
+```Shell
+git clone https://github.com/AymericPost/WildMatou-Front.git
+```
+2. Instalez les dépendances. Entrez dans le dossier téléchargé et entrez le terminal les commandes :
+```Shell
+npm install
+npm install bootstrap
+npm install jquerry
+npm install poppers.js
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Compiler le site
 
-## Running end-to-end tests
+Lancez le serveur et la compilation depuis le dossier téléchargé avec la commande :
+```Shell
+ng serve -o
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Pour héberger cette chatbox sur votre réseau local :
 
-## Further help
+1) Récupérez votre adresse ip avec par exemple la commande ```ifconfig```.
+2) Configurez [WildMatou-Back](https://github.com/AymericPost/WildMatou-Back) avec votre IP (voyez [WildMatou-Back/README.md]())
+3) Compilez le projet avec votre ip en argument :
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```Shell
+ng serve -o -host XXX.XXX.XXX.XXX
+```
+
+## Utilisation
+
+### Ordinateur de bureau
+
+1) (facultatif) Entrez un pseudo dans le champ "pseudo". Si ce champ est laissé vide, vous serez nommé en tant qu'Anonyme.
+2) Entre un message dans le champ "message"
+3) Appuyez sur la touche "Entrée" ou sur le bouton "miauler".
+
+### Smartphone et tablettes
+
+1) Descendez jusqu'à la partie "Matou-box" ou appuyez sur les flèches blanches.
+2) Appuyez sur "Nouveau Message". Une nouvelle partie apparait en dessous de la "matou-box" et vous y êtes redirigés.
+3) (facultatif) Entrez un pseudo dans le champ "pseudo". Si ce champ est laissé vide, vous serez nommé en tant qu'Anonyme.
+4) Entre un message dans le champ "message"
+5) Appuyez sur le bouton "miauler".
+
+Vous pouvez à tout moment fermet la partie "nouveau message" en appyant sur la croix rouge en haut du cadre ou sur "Fermer la fenètre de rédaction" en bas de la "matou-box".
+
+## Evolution du projet
+
+### Problèmes connus
+
+1) Le seul verbe HTTP utilisé est GET.
+Dans des futures versions, le vocaburaire HTTP sera étoffé.
+
+2) La matou-box déborde sur le titre du site en version portable lorsque le cadre "Nouveau message" est affiché.
+
+### Fonctionnalités futures
+
+1) Support des smileys (peut être aussi des emojis) avec possibilité de rajouter des smileys personnalisés
+2) Support des liens/url
+3) Support des images
+
+## Framework utilisés
+
+- [Angular](https://angular.io/)
+- [Bootstrap](https://getbootstrap.com/)
