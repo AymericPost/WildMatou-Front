@@ -1,4 +1,4 @@
-# WildMatou
+# WildMatou-Front
 
 WildMatou est une chat-box développée à titre de projet personnel. Ce site permet de discuter avec tous ceux qui y ont accés.
 
