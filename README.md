@@ -45,6 +45,7 @@ Pour héberger cette chatbox sur votre réseau local :
 ```Shell
 ng serve -o -host XXX.XXX.XXX.XXX
 ```
+Remplacez "XXX.XXX.XXX.XXX" par votre IP.
 
 ## Utilisation
 
