@@ -70,6 +70,7 @@ Vous pouvez à tout moment fermet la partie "nouveau message" en appyant sur la 
 ### Problèmes connus
 
 - Le seul verbe HTTP utilisé est GET.
+
 Dans des futures versions, le vocaburaire HTTP sera étoffé.
 - La matou-box déborde sur le titre du site en version portable lorsque le cadre "Nouveau message" est affiché.
 
