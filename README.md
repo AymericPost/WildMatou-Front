@@ -4,6 +4,8 @@ WildMatou est une chat-box développée à titre de projet personnel. Ce site pe
 
 Ce dépot contient la partie présentation front-end. La partie serveur back-end est sur le dépot [WildMatou-Back](https://github.com/AymericPost/WildMatou-Back).
 
+![Chatbox Wild-Matou](https://i.ibb.co/MpzNcRR/matoubox.png)
+
 ## Execution
 
 ### Pré-requis
