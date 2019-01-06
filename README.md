@@ -42,7 +42,13 @@ Pour héberger cette chatbox sur votre réseau local :
 
 1) Récupérez votre adresse ip avec par exemple la commande ```ifconfig```.
 2) Configurez [WildMatou-Back](https://github.com/AymericPost/WildMatou-Back) avec votre IP (voyez [WildMatou-Back/README.md]())
-3) Compilez le projet avec votre ip en argument :
+3) Adaptez les services aux nouvelles adresses du back-end.
+Les fichiers à modifier sont :
+- ```src/app/matou-roar.service.ts```
+- ```src/app/matou-fetch.service.ts```
+A la ligne 18 de ces deux fichiers, changez ```localhost:8080``` par l'IP et le port configurés dans le back-end.
+
+4) Compilez le projet avec votre ip en argument :
 
 ```Shell
 ng serve -o -host XXX.XXX.XXX.XXX
@@ -71,7 +77,7 @@ Vous pouvez à tout moment fermet la partie "nouveau message" en appyant sur la 
 
 ### Problèmes connus
 
-- Le seul verbe HTTP utilisé est GET.
+- ~~Le seul verbe HTTP utilisé est GET.~~ POST est maintenant aussi utilisé !
 
 Dans des futures versions, le vocaburaire HTTP sera étoffé.
 - La matou-box déborde sur le titre du site en version portable lorsque le cadre "Nouveau message" est affiché.
