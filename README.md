@@ -46,6 +46,7 @@ Pour héberger cette chatbox sur votre réseau local :
 Les fichiers à modifier sont :
 - ```src/app/matou-roar.service.ts```
 - ```src/app/matou-fetch.service.ts```
+
 A la ligne 18 de ces deux fichiers, changez ```localhost:8080``` par l'IP et le port configurés dans le back-end.
 
 4) Compilez le projet avec votre ip en argument :
