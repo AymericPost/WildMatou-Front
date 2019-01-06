@@ -86,7 +86,8 @@ Dans des futures versions, le vocaburaire HTTP sera étoffé.
 
 1) Support des smileys (peut être aussi des emojis) avec possibilité de rajouter des smileys personnalisés
 2) Support des liens/url
-3) Support des images
+3) Notification de nouveaux messages
+4) Support des images
 
 ## Framework utilisés
 
