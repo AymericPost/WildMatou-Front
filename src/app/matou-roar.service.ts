@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map} from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +14,11 @@ export class MatouRoarService {
      this.client = client;
    }
 
-   public roar(pseudo:string, message:string):Observable<any>{
+   public roar(message:any):Observable<any>{
+    const promise:Observable<any> = this.client.post<any>("http://localhost:8080/send", message)
 
-      const url = "http://192.168.1.205:8042/send?pseudo=" + pseudo + "&text=" + message;
-    const promise:Observable<any> = this.client.get(url)
-
-    const treatment = (data:any):any => {
-      return data;
-   };
-    return promise.pipe( map( treatment ));
+    return promise.pipe(catchError(() => {
+       return throwError("Le matou s'est perdu dans la forêt !");
+    }));
   }
 }

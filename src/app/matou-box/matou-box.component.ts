@@ -63,10 +63,10 @@ export class MatouBoxComponent implements OnInit, AfterViewChecked {
 
   public miaou(pseudo, message):void {
 
-
+     // Il y a un problème avec la RegEx ou la fonction... Je verai plus tard pour la gestion des liens.
      // if(this.regexUrl.test(message)) {
      //    let urls = [];
-     // 
+     //
      //    urls = this.regexUrl.exec(message);
      //    console.log(urls);
      //
@@ -75,7 +75,11 @@ export class MatouBoxComponent implements OnInit, AfterViewChecked {
      //    }
      // }
 
-     this.roar.roar(pseudo, message).subscribe(
+     const miaou:any = {
+        "pseudo":pseudo,
+        "message":message
+     };
+     this.roar.roar(miaou).subscribe(
       (incoming:any) => { });
       this.message = "";
       this.smInputIsDisplayed = false;
